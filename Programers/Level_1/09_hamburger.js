@@ -45,3 +45,26 @@ function solution(ingredient) {
 
   return result;
 }
+
+function solution2(ingredient) {
+  let burgers = 0;
+
+  for (let i = 3; i < ingredient.length; i += 1) {
+    if (i < 3) i + 2;
+
+    if (
+      ingredient[i - 3] === 1 &&
+      ingredient[i - 2] === 2 &&
+      ingredient[i - 1] === 3 &&
+      ingredient[i] === 1
+    ) {
+      ingredient.splice(i - 3, 4);
+
+      burgers += 1;
+
+      i -= 4;
+    }
+  }
+
+  return burgers;
+}
