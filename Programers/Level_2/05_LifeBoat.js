@@ -16,3 +16,5 @@ function solution(people, limit) {
 
   return count;
 }
+
+// [80, 70, 50, 50]
